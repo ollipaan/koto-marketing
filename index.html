@@ -48,23 +48,13 @@
 
 <style>
   :root {
-    --bg: #ffffff;
-    --bg-alt: #f5f5f7;
-    --text: #1c1c1e;
-    --text-soft: #6e6e73;
-    --border: #e5e5ea;
-    --accent: #1c1c1e;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #000000;
-      --bg-alt: #1c1c1e;
-      --text: #f5f5f7;
-      --text-soft: #a1a1a6;
-      --border: #2c2c2e;
-      --accent: #ffffff;
-    }
+    --bg: #1c1c1e;
+    --bg-alt: #2c2c2e;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --text: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.65);
+    --border: rgba(255, 255, 255, 0.1);
+    --accent: #ffffff;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -118,7 +108,7 @@
 
   .features {
     padding: 80px 0;
-    background: var(--bg-alt);
+    background: #000;
   }
   .features h2 {
     font-size: clamp(28px, 4vw, 40px);
@@ -133,7 +123,7 @@
     gap: 24px;
   }
   .feature {
-    background: var(--bg);
+    background: var(--bg-card);
     border-radius: 18px;
     padding: 28px;
     border: 1px solid var(--border);
@@ -154,9 +144,35 @@
     font-size: 15px;
   }
 
+  .screens {
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  .screens h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .screens-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .screens-row img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
   .why {
     padding: 80px 0;
     text-align: center;
+    background: #000;
   }
   .why h2 {
     font-size: clamp(28px, 4vw, 40px);
@@ -173,7 +189,7 @@
 
   .cta {
     padding: 80px 0;
-    background: var(--bg-alt);
+    background: #000;
     text-align: center;
   }
   .cta h2 {
@@ -263,6 +279,16 @@
         <h3>Useampi asunto</h3>
         <p>Hallitse omakotitalo ja kesämökki samasta sovelluksesta.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="screens">
+  <div class="container">
+    <h2>Selkeä ja yksinkertainen</h2>
+    <div class="screens-row">
+      <!-- Lisää kuvat /screens/-kansioon ja viittaa tähän -->
+      <!-- Esim.: <img src="/screens/etusivu.png" alt="Etusivu"> -->
     </div>
   </div>
 </section>
