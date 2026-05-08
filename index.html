@@ -9,6 +9,9 @@
 <meta name="description" content="Koto laatii räätälöidyn huoltosuunnitelman kodillesi. Pidä kirjaa tehdyistä huolloista, säilytä dokumentit ja seuraa kustannuksia, kaikki yhdessä paikassa.">
 
 <link rel="canonical" href="https://kodinhuoltokirja.netlify.app/">
+<link rel="alternate" hreflang="fi" href="https://kodinhuoltokirja.netlify.app/">
+<link rel="alternate" hreflang="en" href="https://kotohome.netlify.app/">
+<link rel="alternate" hreflang="x-default" href="https://kodinhuoltokirja.netlify.app/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kodinhuoltokirja.netlify.app/">
@@ -79,9 +82,17 @@
   }
   nav .container { display: flex; justify-content: space-between; align-items: center; }
   nav .brand { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
-  nav .links { display: flex; gap: 22px; font-size: 14px; color: var(--text-soft); }
+  nav .links { display: flex; gap: 22px; font-size: 14px; color: var(--text-soft); align-items: center; }
   nav .links a { color: inherit; text-decoration: none; }
   nav .links a:hover { color: var(--text); }
+  nav .lang {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: var(--text-soft);
+  }
+  nav .lang:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
 
   .hero {
     padding: 80px 0 60px;
@@ -244,6 +255,7 @@
     <div class="links">
       <a href="#features">Ominaisuudet</a>
       <a href="https://ollipaan.github.io/koto-web/privacy.html">Tietosuoja</a>
+      <a class="lang" href="https://kotohome.netlify.app/" hreflang="en">EN</a>
     </div>
   </div>
 </nav>
