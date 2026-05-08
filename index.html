@@ -93,7 +93,7 @@
     color: var(--text-soft);
   }
   nav .lang:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
-  nav .cta {
+  nav .links a.cta {
     background: #fff;
     color: #1c1c1e;
     border-radius: 999px;
@@ -101,7 +101,7 @@
     font-size: 14px;
     font-weight: 600;
   }
-  nav .cta:hover { color: #1c1c1e; opacity: 0.85; }
+  nav .links a.cta:hover { color: #1c1c1e; opacity: 0.85; }
 
   @media (max-width: 600px) {
     nav .links a.anchor { display: none; }
@@ -315,7 +315,7 @@
   }
   .audience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 24px;
   }
   .audience-card {
@@ -399,17 +399,11 @@
     margin-bottom: 36px;
   }
   footer .top a {
-    display: inline-flex;
-    align-items: center;
-    background: #fff;
-    color: #1c1c1e;
-    border-radius: 999px;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s;
   }
-  footer .top a:hover { opacity: 0.9; color: #1c1c1e; }
+  footer .top a:hover { transform: scale(1.04); }
+  footer .top img { height: 54px; display: block; }
   footer .legal {
     display: flex;
     justify-content: space-between;
@@ -447,8 +441,8 @@
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Lataa App Storesta" />
     </a>
     <div class="hero-phones">
-      <img class="primary" src="/screens/kodin-huoltokirja-etusivu.png" alt="Kodin huoltokirja Koto — etusivu mobiilisovelluksessa">
-      <img class="secondary" src="/screens/kodin-huoltokirja-suunnitelma.png" alt="Kodin huoltokirja Koto — räätälöity huoltosuunnitelma aikajanalla">
+      <img class="primary" src="/screens/kodin-huoltokirja-etusivu.webp" alt="Kodin huoltokirja Koto — etusivu mobiilisovelluksessa">
+      <img class="secondary" src="/screens/kodin-huoltokirja-suunnitelma.webp" alt="Kodin huoltokirja Koto — räätälöity huoltosuunnitelma aikajanalla">
     </div>
   </div>
 </section>
@@ -589,7 +583,9 @@
 <footer>
   <div class="container">
     <div class="top">
-      <a href="https://apps.apple.com/fi/app/id6762963217">Lataa App Storesta</a>
+      <a href="https://apps.apple.com/fi/app/id6762963217" aria-label="Lataa App Storesta">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Lataa App Storesta">
+      </a>
     </div>
     <div class="legal">
       <div>© 2026 Olli Paananen</div>
