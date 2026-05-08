@@ -228,6 +228,91 @@
   .why ul li { margin-bottom: 6px; }
   .why strong { color: var(--text); font-weight: 600; }
 
+  .audience {
+    padding: 80px 0;
+    background: var(--bg);
+  }
+  .audience h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .audience-card {
+    background: var(--bg-card);
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid var(--border);
+  }
+  .audience-card .icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
+    color: var(--text);
+    line-height: 1;
+  }
+  .audience-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .audience-card p {
+    color: var(--text-soft);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .faq {
+    padding: 80px 0;
+    background: #000;
+  }
+  .faq .container { max-width: 720px; }
+  .faq h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .faq details {
+    border-bottom: 1px solid var(--border);
+    padding: 22px 0;
+  }
+  .faq details:first-of-type { border-top: 1px solid var(--border); }
+  .faq summary {
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-soft);
+    transition: transform 0.2s;
+  }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details[open] summary { color: var(--text); }
+  .faq details p {
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
   footer {
     padding: 40px 0 60px;
     border-top: 1px solid var(--border);
@@ -254,7 +339,6 @@
     <div class="brand">Koto</div>
     <div class="links">
       <a href="#features">Ominaisuudet</a>
-      <a href="/privacy.html">Tietosuoja</a>
       <a class="lang" href="https://kotohome.netlify.app/" hreflang="en">EN</a>
     </div>
   </div>
@@ -301,7 +385,7 @@
         <p>Vuosittaiset huoltokulut yhdellä silmäyksellä, tulevat vuodet mukana.</p>
       </div>
       <div class="feature">
-        <i class="icon ph ph-houses" aria-hidden="true"></i>
+        <i class="icon ph ph-buildings" aria-hidden="true"></i>
         <h3>Useampi asunto</h3>
         <p>Hallitse omakotitalo ja kesämökki samasta sovelluksesta.</p>
       </div>
@@ -341,6 +425,75 @@
       <li>Muistiinpanot ja havainnot vuosien varrelta</li>
     </ul>
     <p>Koto kokoaa kaikki nämä yhteen sovellukseen. Suositukset perustuvat Motiva Oy:n julkaisuun <em>Pientalon huoltokirja</em> sekä RT-kortteihin — eli oikeaan suomalaiseen rakennustietoon, ei arvauksiin.</p>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="container">
+    <h2>Kenelle Koto sopii</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <i class="icon ph ph-house" aria-hidden="true"></i>
+        <h3>Omakotitalon omistajille</h3>
+        <p>Koto on suunniteltu erityisesti pientaloasujille jotka haluavat pitää huoltohistoriasta kiinni ilman Excel-taulukoita tai paperinippuja.</p>
+      </div>
+      <div class="audience-card">
+        <i class="icon ph ph-tree-evergreen" aria-hidden="true"></i>
+        <h3>Mökin tai kakkosasunnon omistajille</h3>
+        <p>Useampi kohde saman tilin alla. Mökin huolto on omanlaistaan: rappaussyksy, vesijohtojen tyhjennys, mökin sulkeminen — Koto pitää nämäkin muistissa.</p>
+      </div>
+      <div class="audience-card">
+        <i class="icon ph ph-key" aria-hidden="true"></i>
+        <h3>Vasta valmistuneen kodin omistajille</h3>
+        <p>Aloita huoltokirja heti kun avaimet ovat kädessä. Takuuajat, urakoitsijoiden yhteystiedot ja alkuperäiset asiakirjat tallessa kun niitä joskus tarvitset.</p>
+      </div>
+      <div class="audience-card">
+        <i class="icon ph ph-magnifying-glass" aria-hidden="true"></i>
+        <h3>Asunnon ostoa harkitseville</h3>
+        <p>Kun seuraavan kerran katsot asuntoa, kysy myyjältä huoltokirjaa. Saat tiedon onko salaojat tarkastettu, milloin vesikatto on uusittu ja mitä on remontoitu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h2>Usein kysyttyä</h2>
+
+    <details>
+      <summary>Onko huoltokirja pakollinen?</summary>
+      <p>Yksityisille pientaloille ei ole lakisääteistä vaatimusta huoltokirjasta, toisin kuin asunto-osakeyhtiöille. Mutta kun myyt asuntoa, asuntokauppalaki velvoittaa antamaan riittävät tiedot kohteen kunnosta. Ajantasainen huoltokirja on selkein tapa täyttää tämä velvoite ja vakuuttaa ostaja kohteen hyvästä hoidosta.</p>
+    </details>
+
+    <details>
+      <summary>Mistä tiedän mitä kaikkea kotia pitää huoltaa?</summary>
+      <p>Koto laatii suunnitelman puolestasi kun annat perustiedot kodistasi: rakennusvuosi, lämmitysmuoto, ilmanvaihto ja muut talotekniikan kohteet. Suositukset perustuvat Motiva Oy:n julkaisuun "Pientalon huoltokirja" sekä RT-kortteihin — eli oikeaan suomalaiseen rakennustietoon, ei arvauksiin.</p>
+    </details>
+
+    <details>
+      <summary>Kuinka usein eri huollot pitäisi tehdä?</summary>
+      <p>Riippuu kohteesta. Salaojien tarkastus pari kertaa vuosikymmenessä, vesikaton tarkastus vuosittain, ilmanvaihtokoneen suodattimet 1–2 kertaa vuodessa, hormien nuohous nuohoussäännösten mukaisesti. Koto huolehtii aikatauluista puolestasi — saat ilmoituksen kun on aika toimia.</p>
+    </details>
+
+    <details>
+      <summary>Talo on vanha enkä muista mitä on huollettu — voiko huoltokirjan aloittaa nyt?</summary>
+      <p>Kyllä. Aloita siitä mitä muistat. Lisää tiedot tehdyistä huolloista vapaina muistiinpanoina, ja anna Koton suunnitella tulevat huollot eteenpäin. Vuosien mittaan kuva täydentyy ja huoltokirja muuttuu arvokkaammaksi.</p>
+    </details>
+
+    <details>
+      <summary>Mitä tapahtuu, jos huoltoja ei tee?</summary>
+      <p>Lyhyellä tähtäimellä ei mitään näkyvää. Pitkällä tähtäimellä huoltovelka kasautuu: kosteusvauriot, sähkönkulutuksen kasvu, laitteiden ennenaikainen rikkoutuminen, ja lopulta pakkoremontit jotka maksavat moninkertaisesti enemmän kuin säännöllinen huolto olisi maksanut.</p>
+    </details>
+
+    <details>
+      <summary>Onko Koto ilmainen?</summary>
+      <p>Kyllä, sovellus on ilmainen ladata ja käyttää. Ei kuukausimaksuja eikä piilokuluja.</p>
+    </details>
+
+    <details>
+      <summary>Miten tietoni pysyvät turvassa?</summary>
+      <p>Tietosi tallennetaan salatun yhteyden yli EU-alueen palvelimelle (Frankfurt). Vain sinä näet omat tietosi (Row Level Security -mekanismi). Voit poistaa tilisi ja kaikki tietosi pysyvästi yhdellä napilla sovelluksen Profiili-sivulta.</p>
+    </details>
   </div>
 </section>
 

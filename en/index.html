@@ -228,6 +228,91 @@
   .why ul li { margin-bottom: 6px; }
   .why strong { color: var(--text); font-weight: 600; }
 
+  .audience {
+    padding: 80px 0;
+    background: var(--bg);
+  }
+  .audience h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .audience-card {
+    background: var(--bg-card);
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid var(--border);
+  }
+  .audience-card .icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
+    color: var(--text);
+    line-height: 1;
+  }
+  .audience-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .audience-card p {
+    color: var(--text-soft);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .faq {
+    padding: 80px 0;
+    background: #000;
+  }
+  .faq .container { max-width: 720px; }
+  .faq h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .faq details {
+    border-bottom: 1px solid var(--border);
+    padding: 22px 0;
+  }
+  .faq details:first-of-type { border-top: 1px solid var(--border); }
+  .faq summary {
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-soft);
+    transition: transform 0.2s;
+  }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details[open] summary { color: var(--text); }
+  .faq details p {
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
   footer {
     padding: 40px 0 60px;
     border-top: 1px solid var(--border);
@@ -254,7 +339,6 @@
     <div class="brand">Koto Home</div>
     <div class="links">
       <a href="#features">Features</a>
-      <a href="/privacy.html">Privacy</a>
       <a class="lang" href="https://kodinhuoltokirja.netlify.app/" hreflang="fi">FI</a>
     </div>
   </div>
@@ -301,7 +385,7 @@
         <p>Yearly maintenance costs at a glance, with future years included.</p>
       </div>
       <div class="feature">
-        <i class="icon ph ph-houses" aria-hidden="true"></i>
+        <i class="icon ph ph-buildings" aria-hidden="true"></i>
         <h3>Multiple homes</h3>
         <p>Manage your house and your cabin from the same app.</p>
       </div>
@@ -341,6 +425,75 @@
       <li>Notes and observations from over the years</li>
     </ul>
     <p>Koto Home brings these together into one app. Recommendations are based on Finnish building guidelines — Motiva Oy's <em>Pientalon huoltokirja</em> publication and RT cards — meaning real building knowledge, not guesses.</p>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="container">
+    <h2>Who Koto Home is for</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <i class="icon ph ph-house" aria-hidden="true"></i>
+        <h3>Detached house owners</h3>
+        <p>Koto Home is built for homeowners who want to keep maintenance history in one place — no spreadsheets, no folders of paper.</p>
+      </div>
+      <div class="audience-card">
+        <i class="icon ph ph-tree-evergreen" aria-hidden="true"></i>
+        <h3>Cottage and second-home owners</h3>
+        <p>Multiple properties under one account. A summer cottage has its own rhythm: closing for winter, draining water lines, autumn checks — Koto remembers them too.</p>
+      </div>
+      <div class="audience-card">
+        <i class="icon ph ph-key" aria-hidden="true"></i>
+        <h3>New home owners</h3>
+        <p>Start the maintenance log the day you get the keys. Warranty periods, contractor contacts and original documents stay safe for when you need them.</p>
+      </div>
+      <div class="audience-card">
+        <i class="icon ph ph-magnifying-glass" aria-hidden="true"></i>
+        <h3>Home buyers</h3>
+        <p>Next time you view a property, ask the seller for the maintenance log. You'll learn whether drains have been inspected, when the roof was washed, and what's been renovated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Is a maintenance log mandatory?</summary>
+      <p>For private detached houses there is no statutory requirement, unlike for housing companies. But when you sell a home, the law obliges you to disclose its condition. An up-to-date maintenance log is the clearest way to meet that obligation and to reassure the buyer.</p>
+    </details>
+
+    <details>
+      <summary>How do I know what to maintain in my home?</summary>
+      <p>Koto Home creates the plan for you when you provide the basics: year built, heating system, ventilation, and other building systems. Recommendations are based on Motiva Oy's <em>Pientalon huoltokirja</em> publication and Finnish RT building cards — real construction knowledge, not guesses.</p>
+    </details>
+
+    <details>
+      <summary>How often should different things be maintained?</summary>
+      <p>It depends. Drainage inspection every few years, roof inspection annually, ventilation filters once or twice a year, chimney sweeping per regulations. Koto Home handles the schedule for you — you get a notification when it's time to act.</p>
+    </details>
+
+    <details>
+      <summary>The house is old and I don't remember what's been maintained — can I still start now?</summary>
+      <p>Yes. Start with what you remember. Add notes about previous work, and let Koto Home schedule what's coming. Over the years the picture fills in and the log becomes more valuable.</p>
+    </details>
+
+    <details>
+      <summary>What happens if I skip maintenance?</summary>
+      <p>In the short term, nothing visible. Long term, debt accumulates: moisture damage, higher energy bills, premature equipment failure, and eventually forced renovations that cost many times more than regular maintenance would have.</p>
+    </details>
+
+    <details>
+      <summary>Is Koto Home free?</summary>
+      <p>Yes — the app is free to download and use. No subscriptions, no hidden costs.</p>
+    </details>
+
+    <details>
+      <summary>How is my data kept safe?</summary>
+      <p>Your data is stored over an encrypted connection on EU servers (Frankfurt). Only you can see your own data (Row Level Security). You can permanently delete your account and all data with one tap from the Profile page.</p>
+    </details>
   </div>
 </section>
 
