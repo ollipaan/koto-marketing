@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://koto.netlify.app/sitemap.xml
+Sitemap: https://kodinhuoltokirja.netlify.app/sitemap.xml
