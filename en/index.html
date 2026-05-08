@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1c1c1e">
 
-<title>Koto Home – Your home's digital maintenance log</title>
+<title>Koto Home – your home's maintenance log</title>
 <meta name="description" content="Koto Home creates a personalized maintenance plan for your home. Track completed work, store documents and follow costs, all in one place.">
 
 <link rel="canonical" href="https://kotohome.netlify.app/">
@@ -15,13 +15,13 @@
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kotohome.netlify.app/">
-<meta property="og:title" content="Koto Home – Your home's digital maintenance log">
+<meta property="og:title" content="Koto Home – your home's maintenance log">
 <meta property="og:description" content="Koto Home creates a personalized maintenance plan for your home.">
 <meta property="og:image" content="https://kotohome.netlify.app/og-image.png">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Koto Home – Your home's digital maintenance log">
+<meta name="twitter:title" content="Koto Home – your home's maintenance log">
 <meta name="twitter:description" content="Koto Home creates a personalized maintenance plan for your home.">
 <meta name="twitter:image" content="https://kotohome.netlify.app/og-image.png">
 
@@ -95,7 +95,7 @@
   nav .lang:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
 
   .hero {
-    padding: 80px 0 60px;
+    padding: 80px 0 120px;
     text-align: center;
   }
   .hero h1 {
@@ -127,6 +127,45 @@
   }
   .badge:hover { transform: scale(1.04); }
   .badge img { height: 54px; display: block; }
+
+  .hero-phones {
+    margin-top: 80px;
+    position: relative;
+    height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-phones img {
+    position: absolute;
+    height: auto;
+    display: block;
+  }
+  .hero-phones .primary {
+    width: 280px;
+    max-width: 56vw;
+    z-index: 2;
+    transform: translateX(-15%);
+  }
+  .hero-phones .secondary {
+    width: 230px;
+    max-width: 46vw;
+    z-index: 1;
+    transform: translateX(45%) translateY(8%);
+    opacity: 0.92;
+  }
+
+  @media (max-width: 600px) {
+    .hero-phones { height: 460px; }
+    .hero-phones .primary {
+      width: 220px;
+      transform: translateX(-22%);
+    }
+    .hero-phones .secondary {
+      width: 180px;
+      transform: translateX(50%) translateY(10%);
+    }
+  }
 
   .features {
     padding: 80px 0;
@@ -166,31 +205,6 @@
   .feature p {
     color: var(--text-soft);
     font-size: 15px;
-  }
-
-  .screens {
-    padding: 80px 0;
-    overflow: hidden;
-  }
-  .screens h2 {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 50px;
-    text-align: center;
-  }
-  .screens-row {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .screens-row img {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-    border-radius: 24px;
-    display: block;
   }
 
   .why {
@@ -348,12 +362,16 @@
 
 <section class="hero">
   <div class="container">
-    <h1>Koto Home.<br>Your home's maintenance log.</h1>
+    <h1>Koto Home, your home's maintenance log</h1>
     <h2>Take care of your home.</h2>
-    <p class="tagline">Koto Home creates a personalized maintenance plan and reminds you when it's time to act.</p>
+    <p class="tagline">Koto Home creates a personalized maintenance plan and reminds you when it's time for maintenance.</p>
     <a class="badge" href="https://apps.apple.com/app/id6762963217" aria-label="Download on the App Store">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
     </a>
+    <div class="hero-phones">
+      <img class="primary" src="/screens/1-right-en.png" alt="Home screen">
+      <img class="secondary" src="/screens/2-left-en.png" alt="Maintenance plan">
+    </div>
   </div>
 </section>
 
@@ -395,15 +413,6 @@
   </div>
 </section>
 
-<section class="screens">
-  <div class="container">
-    <h2>Clean and simple</h2>
-    <div class="screens-row">
-      <!-- Add images to /screens/ folder and reference here -->
-      <!-- e.g. <img src="/screens/home.png" alt="Home screen"> -->
-    </div>
-  </div>
-</section>
 
 <section class="why">
   <div class="container">
