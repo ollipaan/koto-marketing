@@ -93,6 +93,20 @@
     color: var(--text-soft);
   }
   nav .lang:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+  nav .cta {
+    background: #fff;
+    color: #1c1c1e;
+    border-radius: 999px;
+    padding: 7px 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  nav .cta:hover { color: #1c1c1e; opacity: 0.85; }
+
+  @media (max-width: 600px) {
+    nav .links a.anchor { display: none; }
+    nav .links { gap: 12px; }
+  }
 
   .hero {
     padding: 80px 0 120px;
@@ -374,12 +388,29 @@
   }
 
   footer {
-    padding: 40px 0 60px;
+    padding: 60px 0;
     border-top: 1px solid var(--border);
     color: var(--text-soft);
     font-size: 13px;
   }
-  footer .container {
+  footer .top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+  footer .top a {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #1c1c1e;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  footer .top a:hover { opacity: 0.9; color: #1c1c1e; }
+  footer .legal {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -398,9 +429,10 @@
   <div class="container">
     <div class="brand">Koto</div>
     <div class="links">
-      <a href="#features">Ominaisuudet</a>
-      <a href="#audience">Kenelle</a>
-      <a href="#faq">Usein kysyttyä</a>
+      <a class="anchor" href="#features">Ominaisuudet</a>
+      <a class="anchor" href="#audience">Kenelle</a>
+      <a class="anchor" href="#faq">Usein kysyttyä</a>
+      <a class="cta" href="https://apps.apple.com/fi/app/id6762963217">Lataa</a>
       <a class="lang" href="https://kotohome.netlify.app/" hreflang="en">EN</a>
     </div>
   </div>
@@ -556,11 +588,15 @@
 
 <footer>
   <div class="container">
-    <div>© 2026 Olli Paananen</div>
-    <div class="links">
-      <a href="/privacy.html">Tietosuoja</a>
-      <a href="https://ollipaan.github.io/koto-web/">Tuki</a>
-      <a href="https://apps.apple.com/fi/app/id6762963217">App Store</a>
+    <div class="top">
+      <a href="https://apps.apple.com/fi/app/id6762963217">Lataa App Storesta</a>
+    </div>
+    <div class="legal">
+      <div>© 2026 Olli Paananen</div>
+      <div class="links">
+        <a href="/privacy.html">Tietosuoja</a>
+        <a href="https://ollipaan.github.io/koto-web/">Tuki</a>
+      </div>
     </div>
   </div>
 </footer>
