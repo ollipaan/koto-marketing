@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1c1c1e">
+
+<title>Tuki – Koto</title>
+<meta name="description" content="Koto-sovelluksen tuki ja yhteystiedot. Usein kysytyt kysymykset ja yhteydenotto.">
+
+<link rel="canonical" href="https://kodinhuoltokirja.netlify.app/tuki.html">
+<link rel="alternate" hreflang="fi" href="https://kodinhuoltokirja.netlify.app/tuki.html">
+<link rel="alternate" hreflang="en" href="https://kotohome.netlify.app/support.html">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<style>
+  :root {
+    --bg: #1c1c1e;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --text: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.65);
+    --border: rgba(255, 255, 255, 0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+
+  nav {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  nav .container { max-width: 980px; display: flex; justify-content: space-between; align-items: center; }
+  nav .brand { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); text-decoration: none; }
+  nav .links { display: flex; gap: 22px; font-size: 14px; color: var(--text-soft); align-items: center; }
+  nav .links a { color: inherit; text-decoration: none; }
+  nav .links a:hover { color: var(--text); }
+  nav .lang {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: var(--text-soft);
+  }
+  nav .lang:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+
+  main {
+    padding: 60px 0 80px;
+  }
+  main h1 {
+    font-size: clamp(32px, 5vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 36px;
+  }
+  main h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 48px;
+    margin-bottom: 18px;
+  }
+  main p {
+    color: var(--text-soft);
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+  main strong { color: var(--text); font-weight: 600; }
+  main a { color: var(--text); }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+  }
+  .card + .card { margin-top: 12px; }
+  .card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .card p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background: #fff;
+    color: #1c1c1e;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 6px;
+  }
+  .contact-btn:hover { opacity: 0.9; }
+
+  footer {
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 13px;
+  }
+  footer .container {
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  footer a { color: inherit; text-decoration: none; }
+  footer a:hover { color: var(--text); }
+  footer .links { display: flex; gap: 22px; }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <a class="brand" href="/">Koto</a>
+    <div class="links">
+      <a href="/">Etusivu</a>
+      <a class="lang" href="https://kotohome.netlify.app/support.html" hreflang="en">EN</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h1>Tuki</h1>
+    <p>Onko sinulla kysyttävää tai palautetta? Lähetä sähköpostia tai katso vastauksia alta.</p>
+    <p style="margin-top: 22px;">
+      <a class="contact-btn" href="mailto:ollip.paananen@gmail.com">ollip.paananen@gmail.com</a>
+    </p>
+
+    <h2>Usein kysyttyä</h2>
+
+    <div class="card">
+      <h3>Miten luon huoltosuunnitelman?</h3>
+      <p>Avaa sovellus, lisää uusi asunto ja täytä perustiedot. Koto luo suunnitelman antamiesi tietojen perusteella.</p>
+    </div>
+
+    <div class="card">
+      <h3>Voinko lisätä useita asuntoja?</h3>
+      <p>Kyllä. Profiilisivulta voit lisätä useamman asunnon ja vaihtaa aktiivisen napauttamalla.</p>
+    </div>
+
+    <div class="card">
+      <h3>Kuinka palautan salasanan?</h3>
+      <p>Kirjautumisnäytöllä napauta "Unohditko salasanasi". Saat sähköpostiisi linkin, jolla voit asettaa uuden salasanan. Avaa linkki sillä laitteella, johon Koto on asennettu.</p>
+    </div>
+
+    <div class="card">
+      <h3>Voinko poistaa tilini?</h3>
+      <p>Kyllä. Profiilisivulta löydät roskakori-ikonin oikeasta yläkulmasta, josta voit poistaa tilisi ja kaiken datasi pysyvästi.</p>
+    </div>
+
+    <div class="card">
+      <h3>Mihin huoltosuositukset perustuvat?</h3>
+      <p>Suositukset perustuvat Motiva Oy:n julkaisuun "Pientalon huoltokirja" (2024) sekä RT-kortteihin ja muihin virallisiin lähteisiin.</p>
+    </div>
+
+    <h2>Vastuuvapauslauseke</h2>
+    <p>Koto voi antaa ehdotuksia kiinteistösi tai asuntosi huoltotarpeista perustuen syöttämiisi tietoihin. Ehdotukset ovat suuntaa-antavia, eivätkä korvaa ammattilaisen arviota. <strong>Olet itse vastuussa huoltojen aikatauluttamisesta ja toteutuksesta.</strong> Sovelluksen tekijät eivät vastaa ehdotusten perusteella tehtyjen tai tekemättä jätettyjen toimenpiteiden seurauksista.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Olli Paananen</div>
+    <div class="links">
+      <a href="/privacy.html">Tietosuoja</a>
+      <a href="https://apps.apple.com/fi/app/id6762963217">App Store</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
