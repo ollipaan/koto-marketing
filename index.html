@@ -25,6 +25,8 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,17 +88,26 @@
     text-align: center;
   }
   .hero h1 {
-    font-size: clamp(40px, 7vw, 64px);
+    font-size: clamp(36px, 6vw, 56px);
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.05;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+  }
+  .hero h2 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    color: var(--text);
   }
   .hero .tagline {
-    font-size: clamp(20px, 3vw, 24px);
+    font-size: clamp(18px, 2.6vw, 22px);
     color: var(--text-soft);
     max-width: 600px;
     margin: 0 auto 36px;
+    line-height: 1.4;
   }
 
   .badge {
@@ -129,9 +140,11 @@
     border: 1px solid var(--border);
   }
   .feature .icon {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 14px;
     display: block;
+    color: var(--text);
+    line-height: 1;
   }
   .feature h3 {
     font-size: 18px;
@@ -171,38 +184,38 @@
 
   .why {
     padding: 80px 0;
-    text-align: center;
     background: #000;
   }
+  .why .container { max-width: 720px; }
   .why h2 {
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+    line-height: 1.15;
+  }
+  .why h3 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 38px;
+    margin-bottom: 14px;
   }
   .why p {
-    max-width: 640px;
-    margin: 0 auto 14px;
     color: var(--text-soft);
     font-size: 17px;
-  }
-
-  .cta {
-    padding: 80px 0;
-    background: #000;
-    text-align: center;
-  }
-  .cta h2 {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    line-height: 1.65;
     margin-bottom: 18px;
   }
-  .cta p {
+  .why ul {
     color: var(--text-soft);
-    margin-bottom: 30px;
     font-size: 17px;
+    line-height: 1.65;
+    padding-left: 22px;
+    margin-bottom: 18px;
   }
+  .why ul li { margin-bottom: 6px; }
+  .why strong { color: var(--text); font-weight: 600; }
 
   footer {
     padding: 40px 0 60px;
@@ -237,7 +250,8 @@
 
 <section class="hero">
   <div class="container">
-    <h1>Pidä huolta kodistasi.</h1>
+    <h1>Koto.<br>Kotisi huoltokirja.</h1>
+    <h2>Pidä huolta kodistasi.</h2>
     <p class="tagline">Koto laatii räätälöidyn huoltosuunnitelman ja muistuttaa, kun on aika toimia.</p>
     <a class="badge" href="https://apps.apple.com/fi/app/id6762963217" aria-label="Lataa App Storesta">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Lataa App Storesta" />
@@ -250,32 +264,32 @@
     <h2>Mitä Koto tekee</h2>
     <div class="feature-grid">
       <div class="feature">
-        <span class="icon">📋</span>
+        <i class="icon ph ph-clipboard-text" aria-hidden="true"></i>
         <h3>Henkilökohtainen suunnitelma</h3>
         <p>Kerro perustiedot kodistasi — Koto laatii suunnitelman: mitä, milloin ja miksi.</p>
       </div>
       <div class="feature">
-        <span class="icon">🔔</span>
+        <i class="icon ph ph-bell" aria-hidden="true"></i>
         <h3>Muistutukset ajallaan</h3>
         <p>Saat kuukausittain push-muistutuksen tämän kuun ja myöhässä olevista huolloista.</p>
       </div>
       <div class="feature">
-        <span class="icon">📒</span>
+        <i class="icon ph ph-notebook" aria-hidden="true"></i>
         <h3>Huoltopäiväkirja</h3>
         <p>Pidä kirjaa tehdyistä huolloista. Päivämäärät, kustannukset ja vapaat muistiinpanot.</p>
       </div>
       <div class="feature">
-        <span class="icon">📁</span>
+        <i class="icon ph ph-folder" aria-hidden="true"></i>
         <h3>Dokumentit tallessa</h3>
         <p>Pohjapiirrokset, takuupaperit, sopimukset — kaikki yhdessä paikassa.</p>
       </div>
       <div class="feature">
-        <span class="icon">📊</span>
+        <i class="icon ph ph-chart-line" aria-hidden="true"></i>
         <h3>Kustannusseuranta</h3>
         <p>Vuosittaiset huoltokulut yhdellä silmäyksellä, tulevat vuodet mukana.</p>
       </div>
       <div class="feature">
-        <span class="icon">🏘️</span>
+        <i class="icon ph ph-houses" aria-hidden="true"></i>
         <h3>Useampi asunto</h3>
         <p>Hallitse omakotitalo ja kesämökki samasta sovelluksesta.</p>
       </div>
@@ -295,19 +309,26 @@
 
 <section class="why">
   <div class="container">
-    <h2>Suomalaista rakennustietoa</h2>
-    <p>Huoltosuositukset perustuvat Motiva Oy:n julkaisuun "Pientalon huoltokirja" sekä RT-kortteihin ja muihin virallisiin lähteisiin.</p>
-    <p>Tietosi tallennetaan turvallisesti EU-alueen palvelimille. Voit poistaa tilisi ja kaiken datasi sovelluksen sisällä milloin tahansa.</p>
-  </div>
-</section>
+    <h2>Miksi kotia kannattaa huoltaa</h2>
+    <p>Asunto on useimmille suomalaisille suurin yksittäinen omaisuus. Sen kunnosta huolehtiminen ei ole pelkästään esteettinen kysymys — säännöllinen huolto pidentää rakenteiden käyttöikää, ehkäisee kosteus- ja homevaurioita ja auttaa pitämään asumiskulut hallinnassa.</p>
+    <p>Suomen vaihtelevat sääolot — kostea syksy, pakkastalvi, kevätsulamat — koettelevat kotia jatkuvasti. Vesikaton tarkastus, salaojien huuhtelu, ilmanvaihdon suodattimien vaihto ja monet muut huoltotoimet tehdään harvoin, mutta säännöllisesti — juuri silloin kun ne unohtuvat helpoiten.</p>
 
-<section class="cta">
-  <div class="container">
-    <h2>Aloita ilmaiseksi</h2>
-    <p>Ei piilokuluja, ei tilauksia. Lataa ja kokeile.</p>
-    <a class="badge" href="https://apps.apple.com/fi/app/id6762963217" aria-label="Lataa App Storesta">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Lataa App Storesta" />
-    </a>
+    <h3>Pieni huolto säästää suuren remontin</h3>
+    <p>Salaojituksen tarkastus pari kertaa vuosikymmenessä maksaa muutaman tunnin. Tukkeutuneen salaojan aiheuttama kosteusvaurio voi maksaa kymmeniätuhansia. Ilmanvaihtokoneen suodattimen vaihto vie tunnin vuodessa ja säästää sähköä — vaihtamatta jätetty laite kuluttaa enemmän ja kaatuu nopeammin. <strong>Huoltovelka kasautuu hiljaa, kunnes lasku on iso.</strong></p>
+
+    <h3>Huoltokirja parantaa asunnon arvoa</h3>
+    <p>Asuntoa myydessä ostaja kysyy aina: mitä on huollettu ja milloin? Ajantasainen huoltokirja vakuuttaa ostajan, nopeuttaa kauppaa ja tukee pyyntihintaa. Asuntokauppalain mukaan myyjän on annettava tiedot kohteen kunnosta — huoltokirja on selkein tapa täyttää tämä velvoite.</p>
+
+    <h2>Mitä huoltokirja sisältää</h2>
+    <p>Hyvä huoltokirja ei ole pelkkä lista vaan elävä asiakirja. Sieltä löytyy:</p>
+    <ul>
+      <li>Perustiedot kiinteistöstä: rakennusvuosi, neliöt, rakenteet, talotekniikka</li>
+      <li>Suunnitellut huollot ja niiden eräpäivät</li>
+      <li>Tehdyt huollot kustannuksineen</li>
+      <li>Asiakirjat: pohjapiirrokset, takuupaperit, urakoitsijasopimukset</li>
+      <li>Muistiinpanot ja havainnot vuosien varrelta</li>
+    </ul>
+    <p>Koto kokoaa kaikki nämä yhteen sovellukseen. Suositukset perustuvat Motiva Oy:n julkaisuun <em>Pientalon huoltokirja</em> sekä RT-kortteihin — eli oikeaan suomalaiseen rakennustietoon, ei arvauksiin.</p>
   </div>
 </section>
 
