@@ -168,29 +168,89 @@
     font-size: 15px;
   }
 
-  .screens {
-    padding: 80px 0;
-    overflow: hidden;
+  .hero-phones {
+    margin-top: 60px;
+    position: relative;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .screens h2 {
+  .hero-phones img {
+    position: absolute;
+    height: auto;
+    display: block;
+  }
+  .hero-phones .primary {
+    width: 280px;
+    max-width: 56vw;
+    z-index: 2;
+    transform: translateX(-15%);
+  }
+  .hero-phones .secondary {
+    width: 230px;
+    max-width: 46vw;
+    z-index: 1;
+    transform: translateX(45%) translateY(8%);
+    opacity: 0.92;
+  }
+
+  @media (max-width: 600px) {
+    .hero-phones { height: 460px; }
+    .hero-phones .primary {
+      width: 220px;
+      transform: translateX(-22%);
+    }
+    .hero-phones .secondary {
+      width: 180px;
+      transform: translateX(50%) translateY(10%);
+    }
+  }
+
+  .feature-shot {
+    padding: 80px 0;
+    background: var(--bg);
+  }
+  .feature-shot.alt { background: #000; }
+  .feature-shot .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .feature-shot.reverse .container { flex-direction: row-reverse; }
+  .feature-shot .text {
+    flex: 1;
+    min-width: 280px;
+    max-width: 440px;
+  }
+  .feature-shot h2 {
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: 50px;
-    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 18px;
   }
-  .screens-row {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
+  .feature-shot p {
+    color: var(--text-soft);
+    font-size: 17px;
+    line-height: 1.55;
   }
-  .screens-row img {
-    width: 100%;
-    max-width: 260px;
+  .feature-shot .shot {
+    flex: 0 0 auto;
+  }
+  .feature-shot .shot img {
+    width: 280px;
+    max-width: 70vw;
     height: auto;
-    border-radius: 24px;
     display: block;
+  }
+
+  @media (max-width: 720px) {
+    .feature-shot.reverse .container { flex-direction: column; }
+    .feature-shot .container { flex-direction: column; gap: 40px; }
+    .feature-shot .text { text-align: center; }
   }
 
   .why {
@@ -354,6 +414,10 @@
     <a class="badge" href="https://apps.apple.com/fi/app/id6762963217" aria-label="Lataa App Storesta">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Lataa App Storesta" />
     </a>
+    <div class="hero-phones">
+      <img class="primary" src="/screens/1-right.png" alt="Etusivu">
+      <img class="secondary" src="/screens/2-left.png" alt="Huoltosuunnitelma">
+    </div>
   </div>
 </section>
 
@@ -395,15 +459,6 @@
   </div>
 </section>
 
-<section class="screens">
-  <div class="container">
-    <h2>Selkeä ja yksinkertainen</h2>
-    <div class="screens-row">
-      <!-- Lisää kuvat /screens/-kansioon ja viittaa tähän -->
-      <!-- Esim.: <img src="/screens/etusivu.png" alt="Etusivu"> -->
-    </div>
-  </div>
-</section>
 
 <section class="why">
   <div class="container">
