@@ -250,6 +250,56 @@
   .badge:hover { transform: scale(1.04); }
   .badge img { height: 54px; display: block; }
 
+  .new-features {
+    padding: 80px 0 0;
+    background: #000;
+  }
+  .new-features .kicker {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .new-features h2 {
+    font-size: clamp(26px, 3.6vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .new-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .new-feature {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    border-radius: 20px;
+    padding: 32px 28px;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .new-feature .icon {
+    font-size: 34px;
+    margin-bottom: 14px;
+    display: block;
+    color: var(--text);
+    line-height: 1;
+  }
+  .new-feature h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .new-feature p {
+    color: var(--text-soft);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
   .features {
     padding: 80px 0;
     background: #000;
@@ -559,6 +609,25 @@
     <div class="hero-phones">
       <img class="primary" src="/screens/kodin-huoltokirja-etusivu.webp" alt="Kodin huoltokirja Koto, etusivu mobiilisovelluksessa">
       <img class="secondary" src="/screens/kodin-huoltokirja-suunnitelma.webp" alt="Kodin huoltokirja Koto, räätälöity huoltosuunnitelma aikajanalla">
+    </div>
+  </div>
+</section>
+
+<section class="new-features">
+  <div class="container">
+    <p class="kicker">Uutta versiossa 1.0.2</p>
+    <h2>Liitä kuitit, laskut ja kuvat</h2>
+    <div class="new-grid">
+      <div class="new-feature">
+        <i class="icon ph ph-share-network" aria-hidden="true"></i>
+        <h3>Sähköpostista suoraan</h3>
+        <p>Saat huoltolaskun tai kuitin sähköpostiin? Jaa-painikkeesta suoraan Kotoon ja liitä päiväkirjamerkintään tai uuteen tehtävään.</p>
+      </div>
+      <div class="new-feature">
+        <i class="icon ph ph-camera" aria-hidden="true"></i>
+        <h3>Kameralla tai galleriasta</h3>
+        <p>Ota kuva huollon yhteydessä tai liitä jälkikäteen galleriasta. Kuvat näkyvät pikkuruutuina kortilla, joista ne aukeavat täysikokoisina.</p>
+      </div>
     </div>
   </div>
 </section>
