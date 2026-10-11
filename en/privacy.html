@@ -170,12 +170,12 @@
 
     <h2>3. Data Storage and Sharing</h2>
     <p>User content and attachments are stored in Supabase (EU, Frankfurt). Each user can only access their own data (Row Level Security). Passwords are encrypted and never stored in plain text.</p>
-    <p>Data and attachments are backed up weekly, encrypted, to Cloudflare R2 (EU). Backups are deleted automatically: database copies after 90 days and attachment copies after about 8 weeks.</p>
+    <p>Data is backed up, encrypted, to Cloudflare R2 (EU) and kept for up to 90 days.</p>
     <p>Usage statistics are processed by PostHog (EU). They are not linked to property content.</p>
     <p>Push reminders are delivered via Expo Push and, on iPhone, Apple Push Notification service (Apple) or, on Android, Firebase Cloud Messaging (Google). Messages contain only the task name, no other user data. Push reminders can be turned off from the app's My info page.</p>
 
     <h2>4. Data Deletion</h2>
-    <p>Users can delete their properties, tasks and documents within the app. The account and all data can be permanently deleted from the app's My info page, or requested by email: <a href="mailto:kotoapp@outlook.com">kotoapp@outlook.com</a>. Instructions: <a href="/delete-account.html">delete your account</a>. Deleted data disappears from backups within 90 days.</p>
+    <p>Users can delete their properties, tasks and documents within the app. The account and all data can be permanently deleted from the app's My info page, or requested by email: <a href="mailto:kotoapp@outlook.com">kotoapp@outlook.com</a>. <a href="/delete-account.html">Delete account</a></p>
 
     <h2>5. Changes</h2>
     <p>This policy may be updated. Significant changes will be communicated within the app.</p>
